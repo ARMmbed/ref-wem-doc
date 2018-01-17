@@ -45,27 +45,11 @@ Then click on the certificate, and then click the button "Download the developer
 
 ![photo](image3.jpeg)
 
-2. Visit FOTA Demo Firmware builder: https://jenkins-internal.mbed.com/view/RedTeam/job/RedFotaDemo/build
+1. Visit and clone the FOTA Demo repository: https://github.com/ARMmbed/fota-demo
 
-3. Next to "mbed_cloud_creds.c" click the "Choose file" button. Select your mbed credentials file. It will get built into the image.
+1. Following the FOTA Demo instruction and build your firmware: https://github.com/ARMmbed/fota-demo/blob/dev/README.md 
 
-4. Set the "wifi" parameters as you need.
-
-5. Set "display version" to any name you want, like "Smith" (this will be displayed on the LCD.
-
-6. Click the blue "Build" button.
-
-7. You will then see a new build started with a progress bar:
-
-![photo](jenkins_new_build.png)
-
-8. Click on the number of your build (e.g. "#111").
-
-9. After about 3 minutes, your build will finish. There is a file you need to download called "combined-1.bin":
-
-![photo](image4.jpeg)
-
-10. Save that file to your computer, then drag-and-drop it into the drive for your device (see step #1).
+1. Save that file to your computer, then drag-and-drop it into the drive for your device (see step #1).
 
 That's it! Wait about a minute and the device is now flashed with your image.
 
@@ -94,44 +78,42 @@ You need to replace NAME with the displayed name of your access point and simili
 
 Type "reboot" to let the device boot up and attemp to connect to the Wi-Fi access point you specified.
 
-##Firmware over-the-air update (FOTA) using jenkins
-1. Visit FOTA Demo Firmware builder: https://jenkins-internal.mbed.com/view/RedTeam/job/RedFotaDemo/build
-2. Next to "mbed_cloud_creds.c" click the "Choose file" button. Select your mbed credentials file. It will get built into the image.
-3. Set the "wifi" parameters as you need.
-4. Increase "number_of_versions" to "2".
-5. Click the blue "Build" button.
-6. After the build finishes, here are the list of artifacts:
-![photo](ScreenShot2017-08-01at1.59.47PM.png)
-7. Download "combined-1.bin", drag-and-drop to device drive.
-8. On device, reboot after flashing finishes. Open device console (baudrate 115200), type "reset all", then reboot device again.
-9. Wait for device to boot up, connect to Wii, and connect to mbed cloud.
-10. Download "fota-demo-2.bin", upload to mbed cloud portal.
-![photo](ScreenShot2017-08-01at2.26.12PM.png)
-11. After upload image, there should be an URL generate for the image <image_URL>
-![photo](ScreenShot2017-08-01at2.28.06PM.png)
-12. In Jenkins, download the Build Artifacts "manifest-files.zip" to local directory
-![photo](ScreenShot2017-08-01at2.31.11PM.png)
-13. Under local directory:
-    * unzip archive.zip
-    * cd archive
-    * unzip manifest-files.zip
-    * cd manifest-files
-14. Create the manifest.  From a command line console on a PC, type the following command:
-    ```
-    manifest-tool create -u <image_URL> -o manifest.v2 -p <path/to/fota-demo-2.bin>
-    ```
-    * <image_URL> is the URL from step 11
-    * <path/to/fota-demo.bin> is the path to fota-demo-2.bin downloaded in step 10
-    * manifest.v2 is the name of the manifest file to create and can be changed as appropriate
+##Firmware over-the-air update (FOTA)
 
-For instructions on how to obtain and use manifest-tool, see 
+Before starting the FOTA campaign we must increment the version of our application because we can't update to the same revision of the firmware.
 
-https://cloud.mbed.com/docs/v1.2/updating-firmware/manifest-tool.html
+In your cloned project folder open the file 'mbed_app.json' with the editor of your choice and increment the version number.
 
-1. Upload manifest to mbed cloud portal.
-Example Deployments Team > Workplace Environmental Monitor Reference Deployment > Screen Shot 2017-08-01 at 2.44.47 PM.png
-2. Create Campaign, choose the manifest just uploaded, save and start.
-Example Deployments Team > Workplace Environmental Monitor Reference Deployment > Screen Shot 2017-08-01 at 2.47.23 PM.png
+change from...
+```
+"version": {
+    "help": "Display this version string on the device",
+    "value": "\"1.0\""
+},
+```
+
+to...
+```
+"version": {
+    "help": "Display this version string on the device",
+    "value": "\"1.1\""
+},
+```
+
+Next open your shell to your project folder. 
+
+```
+make campaign
+```
+
+For a deeper understanding of FOTA please see:
+https://cloud.mbed.com/docs/v1.2/updating-firmware/index.html 
+
+For more details on building please see:
+https://github.com/ARMmbed/fota-demo/blob/dev/README.md 
+
+__Note__
+To insure that FOTA will work after running 'make distclean' you must 1st run 'make certsave' so that your certs will pass to the new clean environment.
 
 ##Demo Script
 
@@ -157,6 +139,12 @@ Example Deployments Team > Workplace Environmental Monitor Reference Deployment 
     * [4/5] Write FW
     * [5/5] CHK Active
 9. After install finishes, board will restart with LCD shows the latest "Version".
+10. Make sure the device is registered with fota-portal 
+    * http://ec2-34-229-249-172.compute-1.amazonaws.com/admin/livedevice/mbedcloudaccount/
+    * Log into the site with - login: production  password: halarges
+    * Registering your mbed cloud account API key generates a request to the mbed cloud portal to set your account's notification webhook to point to the Fota Portal webhook handler.
+    * Mbed cloud account API keys can be created in your mbed cloud portal here:
+        * https://portal.us-east-1.mbedcloud.com/access/keys
 
 State Diagram detailing indicators in all states of the sales demo
 
@@ -172,10 +160,10 @@ State Diagram detailing indicators in all states of the sales demo
     7. Click on the "Resources" tab and scroll down to "Object ID 3301" which contains "light_value".
     8. Click on the path next to "light_value". Say, "This is the light sensor. Let me cover it up."
     9. Cover light sensor with hand, and the value on mbed cloud should change within seconds.
-    10. Open web browser tab to http://staging.fotaportal.deploymbed.com/live-device/ "You don't have to login to mbed, cloud, you can create your own website. Here we've created an example. You can see Temperature, Light, and Humidity."
+    10. Open web browser tab to http://fotaportal.deploymbed.com/live-device/ "You don't have to login to mbed, cloud, you can create your own website. Here we've created an example. You can see Temperature, Light, and Humidity."
     11. Wait for applause.
 * Location 
-    1. With web browser still open to http://staging.fotaportal.deploymbed.com/live-device/ click on "Find Device" link near top
+    1. With web browser still open to http://fotaportal.deploymbed.com/live-device/ click on "Find Device" link near top
     2. Zoom in on map to show location of device
     3. Say, "We can manually change this."
     4. Open web browser tab to  https://portal.us-east-1.mbedcloud.com/login
@@ -186,7 +174,7 @@ State Diagram detailing indicators in all states of the sales demo
     9. Click on link next to "Latitude" (Specifically "3336/0")
     10. Click "edit" type in a number (like 30) and click "Send" button
     11. Do similar steps for "Longitude" and "Uncertainty"
-    12. Go back to map at http://staging.fotaportal.deploymbed.com/live-device/find/
+    12. Go back to map at http://fotaportal.deploymbed.com/live-device/find/
 * Change device label (name)
     1. Open web browser tab to  https://portal.us-east-1.mbedcloud.com/login
     2. Click "Device Directory"
@@ -197,26 +185,11 @@ State Diagram detailing indicators in all states of the sales demo
     7. Click Edit and change value
     8. Click "Send"
     9. Point to device LCD and show the device name changed there
-    10. Also show name changed on http://staging.fotaportal.deploymbed.com/live-device/
+    10. Also show name changed on http://fotaportal.deploymbed.com/live-device/
 * Firmware over-the-air updating.
-    1. Open web browser tab back to mbed cloud portal
-    2. Click on "Device directory"
-    3. Click "Create new filter"
-    4. Click "Add attribute"
-    5. Click "Device ID"
-    6. Copy-paste Device ID into the text field
-    7. Click "Save filter"
-    8. Type in a name and click "Save"
-    9. Click on "Update firmware"
-    10. Click on "Images"
-    11. Click button, "Upload new images"
-    12. Type in a name, then click "Choose file" and select file on your computer "fota-demo.bin" (not the combined.bin file!)
-    13. Click on "Manifests"
-    14. Click button, "Upload new manifest" and fill out the form.
-    15. Click on "Update campaigns"
-    16. Click on "Create campaign"
-    17. Type in a name, select "Manifest" and select "Devices" filter
-    18. Click "Save"
-    19. Say, "Now I will update my devices". Click "Start".
-    20. Device will update and reboot, displaying the new "version" name.
-
+    1. Open 'mbed_app.json'  and increment the version number.
+    2. Open a shell
+    3. CD to you project folder.
+    4. Type 'make campaign'
+    5. Talk about FOTA while waiting for update to begin.
+ 
