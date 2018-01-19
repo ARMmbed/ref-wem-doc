@@ -1,4 +1,4 @@
-#License Status
+# License Status
 
 | Name | Repository | License | Trademark/Copyright | Patent | 3PIP | OSS | Approval Date | Approved SHA | Changes Requiring Review | Service Now Ticket | Created by RED | Publicly Accessible | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -21,7 +21,7 @@
 |mbed Bootloader|https://github.com/armmbed/mbed-bootloader-internal|2cc3ad9| | |N|N|No License?|
 
 
-#Links
+# Links
 
 * JIRA: 
     * *http://us-aus-igor.austin.arm.com:8080/secure/RapidBoard.jspa?rapidView=1&projectKey=RED
@@ -37,7 +37,7 @@
 * Staging Cloud Webhook: http://staging.fotaportal.red.mbed.fattuba.com/live-device/mbed-cloud-webhook/
 * Staging Document Website: http://test.deploymbed.com:5000/
 
-#Demo Videos
+# Demo Videos
 * https://youtu.be/lzeMOiA2W_Y
 * https://youtu.be/AVaQs_Vno0o
 * https://youtu.be/UlDpxea2mRo
@@ -53,7 +53,7 @@
     * Using python project for upcoming workshop:  https://youtu.be/kdmHD2R4-hU
 
 
-#Fota Portal
+# Fota Portal
 
 On staging, to connect your device to the Fota Portal so that telemetry data is graphed on the Live Device page, add your mbed cloud account API key here:
 
@@ -84,8 +84,8 @@ Once you've saved your Mbed cloud api key, you'll need to click "Start long poll
 |Starter Kit 3 (Earwig)| | | | |qrcode_2.svg|Waiting on plastics FW: v1.9.1 FOTA: PASS Label: starter-kit|Sales Tool Demo - FOTA|
 |Starter Kit 4 (?)     | | | | |qrcode_4.svg|?||
 
-#Hardware
-##Component Catalog
+# Hardware
+## Component Catalog
 |Category|Component|Rev B (Bumblebee)|Rev C (Centipede)|Rev D (Dragonfly)|Notes|
 |---|---|---|---|---|---|
 |Main board|FRDM-K64F|X|X|X|  Info:  https://developer.mbed.org/platforms/FRDM-K64F/  Buy:  http://www.mouser.com/ProductDetail/NXP/FRDM-K64F/
@@ -114,19 +114,19 @@ Once you've saved your Mbed cloud api key, you'll need to click "Start long poll
 |Sensor (temp & humidity, digital)|Grove Temperature&Humidity Sensor Pro| |X|X|Info/Buy:  https://www.seeedstudio.com/grove-temperaturehumidity-sensor-pro-p-838.html
 |Battery contacts|(4x) Keystone 288 dual leaf spring battery contact|X|X||Buy:  https://www.amazon.com/gp/product/B00QZE4YAM
 
-#Enclosure
+# Enclosure
 
-###Prototype A (Aardvark)
+### Prototype A (Aardvark)
 Description: off the shelf enclosure
 Info/Buy:  https://www.okwenclosures.com/en/Synergy/ER126059.htm
 
-###Prototype B (Bumblebee)
+### Prototype B (Bumblebee)
 Description: custom design, 3D printed on a cartesian FDM printer, 0.1mm layer height, finished with metallic paint and acrylic disc light pipe
 Preliminary model preview:
 TinkerCAD concept  https://www.tinkercad.com/things/2Yf9L3Xwajp-sales-tool-device-wip/editv2?sharecode=l5UYDPa3LTG5JpMvsD18oKAgj9v4-I8xtR5Nlx7OA5M=
 After sanding and painting:
 
-###Materials:
+### Materials:
 PolyMax PLA 1.75mm  https://www.amazon.com/Polymaker-PolyMax-Filament-Jam-Free-Stronger/dp/B01I4SDE70
 Acrylic sheet 0.8mm  https://www.amazon.com/dp/B01N7MLF3D
 XTC-3D High Performance Self Leveling Epoxy  https://www.amazon.com/XTC-3D-High-Performance-Print-Coating/dp/B00PFXK4JY
@@ -140,7 +140,7 @@ LED order (1 = closest to the connector):
 |-|-|-|-|-|-|-|
 |power|wifi|cloud|update/FOTA|light sensor|temp/humidity sensor|LCD / future sound sensor
 
-###Materials:
+### Materials:
 PolyMax PLA 1.75mm  https://www.amazon.com/Polymaker-PolyMax-Filament-Jam-Free-Stronger/dp/B01I4SDE70
 XTC-3D High Performance Self Leveling Epoxy  https://www.amazon.com/XTC-3D-High-Performance-Print-Coating/dp/B00PFXK4JY
 primer - TBD
@@ -148,20 +148,20 @@ paint - TBD
 Assembly:
 
 
-##Finished look:
+## Finished look:
 
 
-###Prototype D (Dragonfly)
+### Prototype D (Dragonfly)
 Description: custom design, same manufacturing and finish as Rev C; powered by a LiPo flat pack and a battery charging power circuit, with a microUSB female connector and a power switch exposed on the lower part of the enclosure
 
 LED order is the same as Rev C
 
 Materials are the same as Rev C
 
-###Finished look:
+### Finished look:
 
 
-###Prototype E (Earwig)
+### Prototype E (Earwig)
 Description: custom design, downsized from Rev D, fitted with a custom design PCB and intended for external manufacturing and finish due to high demand; reworked locking mechanism acts as ventilation slots when fully locked; top has symmetrical vents positioned to facilitate convection; battery holder fits both the 2500mAh flat pack used in Rev D, as well as a 4400mAh dual 18650 round pack
 
 LED order is the same as Rev C
@@ -169,10 +169,10 @@ LED order is the same as Rev C
 Design images
 Rendered images:
 
-###Finished look:
+### Finished look:
 
-#External manufacturing:
-###Manufacturing Plastics
+# External manufacturing:
+### Manufacturing Plastics
 
 ||FDM|SLA|PolyJet|SLS|CNC|Sanding|Painting|Anodizing|Injection molding|Mold casting|Notes|
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -186,13 +186,13 @@ Rendered images:
 |Shapeways.com|$46.68 PLA $140.57 polished metallic plastic $87.70 strong&flexible|$241.81 Acrylic $151.56 Frosted Ultra|-|$416.01 polished Ni steel|$1095.75|$1 (s&f)|-|-|-|-|Estimates unavailable with light pipes separated from the top
 |UPS.com|$148, 3 days|-|-|-|-|-|-|-|-|-|No finishing, single material only
 
-###Manufacturing choices: 
+### Manufacturing choices:
 Due to the fact that the top part has built-in light channels, manufacturing choices are split in two categories. First, printing the top part without light channels and adding them in-house, either via translucent material pouring (e.g. epoxy or silicone gel) or via press-fitting acrylic cut parts. Both variants are difficult and are likely to yield low quality results (e.g. uneven surfaces or gaps). Second, printing the top part with a dual material process. This is the recommended action, even though it comes with a severe limitation in manufacturing processes. Only FDM and PolyJet are able to embed translucent material into a part. Of the two, FDM is the most cost effective, and PolyJet is the better looking. The exact difference in unfinished quality will vary with the manufacturer. The recommended course of action is to get one unit with each of the two processes, and pick one to move forward based on visual inspection.
 
-###Finishing choices: 
+### Finishing choices:
 For our in-house production we have used manual sanding and painting for the best results. Manufacturing houses all want to avoid this, because of the high and non-scalable cost. Some houses offer automatic sanding and some mention the ability to paint, but without specific pricing. The recommendation is to manufacture the parts with no finish or with only automatic sanding, and see whether the outcome looks satisfactory enough.
 
-#Manufacturing Electronics
+# Manufacturing Electronics
 
 |Manufacturer|5 boards PCB|5 boards assembly|30 boards PCB|30 boards assembly|Tooling|Notes|
 |---|---|---|---|---|---|---|
@@ -216,7 +216,7 @@ For our in-house production we have used manual sanding and painting for the bes
 BOM cost (DigiKey): $120 for one board, $548 for 5 boards, $2778 for 30 boards
 Additional components (LiPo + Molex cable): $20.03 for one board, $92.70 for 5 boards, $537.96 for 30 boards
 
-##Prototype F (Firefly)
+## Prototype F (Firefly)
 Description: complete rework - The PCB is now a single board design and has a modified shape. Test points are present for future test fixture and factory provisioning purposes. Enclosure parts are modular for more versatility and for cheaper and better printing. The locking mechanism is on the top half now, to allow inserting the new PCB at assembly time. Exposed microUSB connector, sliding power switch, charging LED, and a button, all on the upper rim of the enclosure. The bottom side of the enclosure is used only for the battery now, which is larger than in the previous revisions (4400mAh 18650x2 instead of 2500mAh flat pack). The light sensor has its own window, to maximize response to environment changes. The temp/humidity sensor is placed in a thermal relief area on the PCB and positioned directly under an air vent, to make readings more accurate and more responsive. Light pipes are joined together to facilitate future press fit manufacturing. Locking clips and clamps are used throughout, to eliminate the need for hot gluing during assembly.
 
 LED order and face plate looks are the same as Rev E
@@ -254,7 +254,7 @@ Required and suggested PCB fixes from revision E:
 
 
 
-##Bringup
+## Bringup
 1. Plug the board in. Make sure it enumerates as "CRP DISABLD". On a Mac, this will be under /Volumes.
 2. Run this command: `rm /Volumes/CRP\ DISABLD/*; cp -X lpc11u35_mbed_cloud_connect_if_crc.bin /Volumes/CRP\ DISABLD/`
 3. Wait for DAPLink to be flashed (depending on your machine, between 7 and ~70 seconds)
@@ -262,7 +262,7 @@ Required and suggested PCB fixes from revision E:
 5. Hold the Reset button down, and while keeping it down, run this command: `touch /Volumes/DAPLINK/auto_rst.cfg`
 6. Let go of the Reset button. Wait for the board to reboot. Flash firmware. Profit.
 
-##Assembly
+## Assembly
 1. Flush cut the leads at the edge of the PCB, so they fit under the enclosure rim.
 2. Sand the light pipes, to make them diffuse.
 3. Fill out the inside of the cloud icon with black marker or paint, to prevent the LED from shining through. Make sure you do not cross the cloud edge (where the light pipe is).
@@ -276,8 +276,8 @@ Required and suggested PCB fixes from revision E:
 11. Insert the two round PCB clips and twist each of them 90 degrees clockwise to lock the PCB in place.
 12. Connect battery to the PCB and twist lock the two enclosure halves. Test basic functions and ship it.
 
-#Pinouts
-##Base Shield:
+# Pinouts
+## Base Shield:
 
 ||Aardvark|Bumblebee|Centipede|Dragonfly|
 |---|---|---|---|---|
@@ -298,9 +298,9 @@ Required and suggested PCB fixes from revision E:
 |I2C|||N/C|N/C
 |I2C|||N/C|N/C
 
-##Thermal
+## Thermal
 
-####Design #1
+#### Design #1
 
 - FRDM-K64F
 - 1x Grove Seeed LED
@@ -316,7 +316,7 @@ Required and suggested PCB fixes from revision E:
 
 The plastic used for Bumblebee (PLA) has a melting point of 190C/374F and starts to deform (soften) at 60C/140F.
 
-###Electric
+### Electric
 The device uses [ TODO ] when fully powered (all LEDs to full brightness on white, WiFi connected and communicating, the LCD on at full contrast, and the MCU running a tight loop).
 
 |Component|Hardware Revision|typical|max|notes|
@@ -335,7 +335,7 @@ The 96x96 OLED display uses 77mA.
 
 Each LED uses up to 20mA per color (60mA when white at full brightness).
 
-###LED Color State Matrix
+### LED Color State Matrix
 |LED Name|In Progress|Good|Bad|
 |-|-|-|-|
 |Power|Blink Green|Green|Red
@@ -344,19 +344,19 @@ Each LED uses up to 20mA per color (60mA when white at full brightness).
 |Firmware Update (Download in progress)|Blink Yellow|Blue (on download completion)|Red
 |Firmware Update (Perform verifications and write to flash)|Blue|Off (on flash completion, system rebooted) |Red
 
-###Assembly instructions
+### Assembly instructions
 Warning: DO NOT POWER the device until you have adjusted the voltage regulator! They can output 7 times more voltage than the board takes, and ship in an undefined initial state.
 
 Assembly instructions for the Bumblebee prototype sent to Cambridge:  Assembly Instructions - Bumblebee.pdf
 
-#Demo Script
-####Preparation (from a brand new board set)
+# Demo Script
+#### Preparation (from a brand new board set)
 
 1. Plug in the device to laptop, see if it show up as DAPLINK, if not, follow the instruction to update board firmware:  https://blackstoneengineering.github.io/DAPLink/
 2. Copy "combined.bin" to board, wait for the board to flash.
 3. Open board console (baudrate 115200). In console, enter "reset all" then "reboot".
 
-####Pre-Demo check
+#### Pre-Demo check
 
 1. When power on the board, see the power LED on GREEN, LCD on, and first line is the "Version".
 2. When the board is trying to connect wifi, see the wifi LED flashing YELLOW, and on LCD second line, the SSID of the wifi will be show in "WiFi"
@@ -376,7 +376,7 @@ Assembly instructions for the Bumblebee prototype sent to Cambridge:  Assembly I
 State Diagram detailing indicators in all states of the sales demo
 
 
-####Demo script
+#### Demo script
 
 * First Boot
     1. Turn on power to device
@@ -436,10 +436,10 @@ State Diagram detailing indicators in all states of the sales demo
     19. Say, "Now I will update my devices". Click "Start".
     20. Device will update and reboot, displaying the new "version" name.
 
-###FOTA / Recovery / Flashing a Firmware Image manually
+### FOTA / Recovery / Flashing a Firmware Image manually
 See Workplace Environmental Monitor Reference Deployment
 
-###Clang-format
+### Clang-format
 You can use clang-format to easily comply with mbed coding style:  https://developer.mbed.org/teams/SDK-Development/wiki/mbed-sdk-coding-style
 
 
@@ -457,9 +457,9 @@ You can use clang-format to easily comply with mbed coding style:  https://devel
     * Emacs:  https://clang.llvm.org/docs/ClangFormat.html#emacs-integration
     * Sublime Text:  https://github.com/rosshemsley/SublimeClangFormat
 
-##Other Platforms
+## Other Platforms
 
-####u-blox EVK-ODIN-W2
+#### u-blox EVK-ODIN-W2
 An initial port to the EVK-ODIN-W2 platform is available from fota-demo v1.6.0.
 
 The high-level changes to the fota-demo app are as follows.  For more detail, please see the fota-demo git repo.
@@ -469,7 +469,7 @@ The high-level changes to the fota-demo app are as follows.  For more detail, pl
 3. LEDs are removed.  On the K64F, the LEDs are connected to pins D2 and D3.  However, on the EVK-ODIN-W2, pin D2 is also connected to UART-1 RX which causes the serial console to be unable to receive user input from an attached terminal, thus breaking the Commander CLI.  Removing the LEDs from pins D2 and D3 fixed the serial console.
 4. The EVK-ODIN-W2 includes pre-built binary images for the WiFi and Bluetooth driver and inclusion of these pre-built images into the final firmware image causes a significant increase in firmware image size.  This is a problem in particular for the bootloader which has a size constraint of 0x20000 (131072) bytes common across many platforms and becomes too large when combined with the LCD driver for bootloader status messages.  The issue was addressed by increasing the bootloader size and app offsets, a change which had to be replicated in 3 places: the bootloader build configuration file mbed-bootloader/mbed_app.json, the application build configuration file mbed_app.json, and parameters supplied to the combine_bootloader_with_app.py script which combines the bootloader and app into a final firmware image.  The bootloader size constraint was changed to 0x28000 (163840) bytes, an increase of 32768 bytes.
 
-####What works:
+#### What works:
 * bootloader boots
 * app boots
 * WiFi connects to network
@@ -486,11 +486,11 @@ The high-level changes to the fota-demo app are as follows.  For more detail, pl
 * Auto Geo
 * FOTA
 
-####What doesn't work:
+#### What doesn't work:
 * FotaPortal: The Mbed cloud portal does not forward sensor data and manual geo location to the webapp fota portal.  The Odin board data is pushed and can be verified in the mbed cloud portal, but the data doesn't seem to make it all the way to the webapp through the webhook.  Note the same issue was observed on a K64F at the same time, so this may not be an Odin specific issue.
 * Also noticed, odin board will de-register after few minutes up and running. And for a long run, board sometimes hang.
 
-###How to build:
+### How to build:
 
 NOTE: If you are on Windows you may have to install the ST-Link Debug driver from here, or directly from here if you don't want to send e-mail information.
 

@@ -1,5 +1,5 @@
 
-#Workplace Environmental Monitor Reference Deployment
+# Workplace Environmental Monitor Reference Deployment
 
 ![photo](IMG_1254.png)
 
@@ -17,16 +17,16 @@ When turned on, it connects to the Wi-Fi access point it was configured to. Beca
 
 The documentation on this page shows how to flash software onto the device and also how to do wireless updating of the firmware (also known as "firmware over the air" updates).
 
-##Flashing a Firmware Image
+## Flashing a Firmware Image
 You need to flash the firmware at least once because it's the only way to get your device associated with your mbed cloud account. We have a web page setup that compiles the image for you, so you will only need to drag-and-drop the file onto your device.
 
-####Required Hardware:
+#### Required Hardware:
 
 * Laptop with USB port (or dongles to provide a USB port)
 * USB to Micro USB cable
 * The environmental monitor device itself 
 
-####Required file:
+#### Required file:
 
 * An mbed cloud certificate file. First visit https://portal.us-east-1.mbedcloud.com/signup to sign up if you haven't already.
 To get an mbed cloud certificate file, first sign in at https://portal.us-east-1.mbedcloud.com/
@@ -39,7 +39,7 @@ Then click on the certificate, and then click the button "Download the developer
 
 ![photo](mbed_cloud_cert_download.png)
 
-####Now that you have an mbed developer C file, follow the rest of these steps to flash your device:
+#### Now that you have an mbed developer C file, follow the rest of these steps to flash your device:
 
 1. Connect laptop via USB cable to the device. The laptop should automatically add a new drive, in this case named "DAPLINK". This is where you will drag-and-drop the firmware:
 
@@ -53,7 +53,7 @@ Then click on the certificate, and then click the button "Download the developer
 
 That's it! Wait about a minute and the device is now flashed with your image.
 
-##Using the command console on the device
+## Using the command console on the device
 ![photo](ScreenShot2017-12-05at2.34.23PM.jpeg)
 
 ![photo](IMG_2039.jpg)
@@ -78,7 +78,7 @@ You need to replace NAME with the displayed name of your access point and simili
 
 Type "reboot" to let the device boot up and attemp to connect to the Wi-Fi access point you specified.
 
-##Firmware over-the-air update (FOTA)
+## Firmware over-the-air update (FOTA)
 
 Before starting the FOTA campaign we must increment the version of our application because we can't update to the same revision of the firmware.
 
@@ -115,15 +115,15 @@ https://github.com/ARMmbed/fota-demo/blob/dev/README.md
 __Note__
 To insure that FOTA will work after running 'make distclean' you must 1st run 'make certsave' so that your certs will pass to the new clean environment.
 
-##Demo Script
+## Demo Script
 
-####Preparation (from a brand new board set)
+#### Preparation (from a brand new board set)
 
 1. Plug in the device to laptop, see if it show up as DAPLINK, if not, follow the instruction to update board firmware:  https://blackstoneengineering.github.io/DAPLink/
 2. Copy "combined.bin" to board, wait for the board to flash.
 3. Open board console (baudrate 115200). In console, enter "reset all" then "reboot".
 
-####Pre-Demo check
+#### Pre-Demo check
 
 1. When power on the board, see the power LED on GREEN, LCD on, and first line is the "Version".
 2. When the board is trying to connect Wi-Fi, see the Wi-Fi LED flashing YELLOW, and on LCD second line, the SSID of the Wi-Fi will be show in "Wi-Fi"
@@ -148,7 +148,7 @@ To insure that FOTA will work after running 'make distclean' you must 1st run 'm
 
 State Diagram detailing indicators in all states of the sales demo
 
-####Demo
+#### Demo
 
 * First Boot
     1. Turn on power to device
