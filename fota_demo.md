@@ -59,16 +59,15 @@ On staging, to connect your device to the Fota Portal so that telemetry data is 
 
  http://staging.fotaportal.red.mbed.fattuba.com/admin/livedevice/mbedcloudaccount/
 
-login: staging
-password: foobar
-
+login: (contact the RED team for this)
+password: (contact the RED team for this)
 
 ...and on production:
 
 http://ec2-34-229-249-172.compute-1.amazonaws.com/admin/livedevice/mbedcloudaccount/
 
-login: production
-password: halarges
+login: (contact the RED team for this)
+password: (contact the RED team for this)
 Registering your mbed cloud account API key generates a request to the mbed cloud portal to set your account's notification webhook to point to the Fota Portal webhook handler.
 
 Mbed cloud account API keys can be created in your mbed cloud portal here:

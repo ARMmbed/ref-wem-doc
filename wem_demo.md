@@ -141,7 +141,7 @@ To insure that FOTA will work after running 'make distclean' you must 1st run 'm
 9. After install finishes, board will restart with LCD shows the latest "Version".
 10. Make sure the device is registered with fota-portal 
     * http://ec2-34-229-249-172.compute-1.amazonaws.com/admin/livedevice/mbedcloudaccount/
-    * Log into the site with - login: production  password: halarges
+    * Log into the site with - login: (contact the RED team for this)  password: (contact the RED team for this)
     * Registering your mbed cloud account API key generates a request to the mbed cloud portal to set your account's notification webhook to point to the Fota Portal webhook handler.
     * Mbed cloud account API keys can be created in your mbed cloud portal here:
         * https://portal.us-east-1.mbedcloud.com/access/keys
