@@ -1,7 +1,7 @@
 
 # Workplace Environmental Monitor Reference Deployment
 
-![photo](IMG_1254.png)
+![photo](images/IMG_1254.png)
 
 This document contains the current information you need to configure your Workplace Environmental Monitor and set it up so you can demonstrate its functionality to a group.
 
@@ -33,17 +33,17 @@ To get an mbed cloud certificate file, first sign in at https://portal.us-east-1
 
 Click "Device identity", then click on "Actions", then click on "Create a developer certificate":
 
-![photo](mbed_create_cert.png)
+![photo](images/mbed_create_cert.png)
 
 Then click on the certificate, and then click the button "Download the developer C file":
 
-![photo](mbed_cloud_cert_download.png)
+![photo](images/mbed_cloud_cert_download.png)
 
 #### Now that you have an mbed developer C file, follow the rest of these steps to flash your device:
 
 1. Connect laptop via USB cable to the device. The laptop should automatically add a new drive, in this case named "DAPLINK". This is where you will drag-and-drop the firmware:
 
-![photo](image3.jpeg)
+![photo](images/image3.jpeg)
 
 1. Visit and clone the FOTA Demo repository: https://github.com/ARMmbed/fota-demo
 
@@ -54,9 +54,8 @@ Then click on the certificate, and then click the button "Download the developer
 That's it! Wait about a minute and the device is now flashed with your image.
 
 ## Using the command console on the device
-![photo](ScreenShot2017-12-05at2.34.23PM.jpeg)
+![photo](images/ScreenShot2017-12-05at2.34.23PM.jpeg)
 
-![photo](IMG_2039.jpg)
 
 Connect your device to your laptop via a USB cable. Then you can use software such as PuTTy, Coolterm, or Minicom to connect to the device.
 
