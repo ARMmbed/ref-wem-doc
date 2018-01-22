@@ -1,0 +1,38 @@
+[
+    {
+        "description": "Workplace Environmental Monitor Reference Deployment",
+        "slug": "workplace-environmental-monitor",
+        "sources": [
+            {
+                "type": "markdown",
+                "url": "https://github.com/ARMmbed/work_eviro_mon_docs/blob/master/wem_demo.md"
+            }
+        ],
+        "title": "monitor",
+        "type": "markdown"
+    },
+    {
+        "description": "Mbed Enablement Platform",
+        "slug": "hardware",
+        "sources": [
+            {
+                "type": "markdown",
+                "url": "https://github.com/ARMmbed/fota-hardware/blob/master/README.md"
+            }
+        ],
+        "title": "hardware",
+        "type": "markdown"
+    },
+    {
+        "description": "Software",
+        "slug": "software",
+        "sources": [
+            {
+                "type": "markdown",
+                "url": "https://github.com/ARMmbed/fota-demo/blob/dev/docs/software.md"
+            }
+        ],
+        "title": "software",
+        "type": "markdown"
+    }
+]
