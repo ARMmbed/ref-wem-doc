@@ -17,8 +17,6 @@ When turned on, the device connects to the Wi-Fi access point it was configured 
 
 The documentation on this page shows how to flash software onto the device and also how to wirelessly update the firmware (also known as "firmware over the air" updates).
 
-### Flashing a firmware image
-
 You need to flash the firmware at least once because it's the only way to get your device associated with your Arm Mbed Cloud account. We have a web page set up that compiles the image for you, so you only need to drag and drop the file onto your device.
 
 #### Required hardware:
@@ -43,6 +41,7 @@ Click on the certificate, and then click the button `Download the developer C fi
 #### Now that you have an Arm Mbed developer C file, follow the these steps to flash your device:
 
 1. Connect your laptop to the device with a USB cable. The laptop automatically adds a new drive, in this case named `DAPLINK`. This is where you drag and drop the firmware:
+
 
 <span class="images">![](https://s3-us-west-2.amazonaws.com/mbed-os-docs-images/image3.jpeg)<span>Photo</span></span>
 
@@ -154,6 +153,7 @@ https://github.com/ARMmbed/fota-demo/blob/dev/README.md
     - Registering your Mbed Cloud account API key generates a request to the Mbed Cloud portal to set your account's notification webhook to point to the Fota portal webhook handler.
     - You can create Mbed Cloud account API keys in your Mbed Cloud portal here: 
       https://portal.us-east-1.mbedcloud.com/access/keys
+
 
 State Diagram detailing indicators in all states of the sales demo
 
