@@ -34,5 +34,17 @@
         ],
         "title": "software",
         "type": "markdown"
+    },
+    {
+        "description": "fotaportal",
+        "slug": "fotaportal",
+        "sources": [
+            {
+                "type": "markdown",
+                "url": "https://github.com/ARMmbed/fotaportal/blob/staging/README.md"
+            }
+        ],
+        "title": "fotaportal",
+        "type": "markdown"
     }
 ]
