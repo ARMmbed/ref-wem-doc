@@ -1,7 +1,7 @@
 
 ## Workplace Environmental Monitor Reference Deployment
 
-<span class="images">![](https://s3-us-west-2.amazonaws.com/mbed-os-docs-images/IMG_1254.png)<span>Photo</span></span>
+<span class="images">![](https://s3.us-west-2.amazonaws.com/reference-docs-images/work_environ_mon_docs/IMG_1254.png)<span>Photo</span></span>
 
 This document contains the information you need to configure your Workplace Environmental Monitor and set it up, so you can demonstrate its functionality to a group.
 
@@ -32,18 +32,18 @@ To get an Mbed Cloud certificate file, sign in at https://portal.us-east-1.mbedc
 
 Click "Device identity", and then click on "Actions". Then click on "Create a developer certificate":
 
-<span class="images">![](https://s3-us-west-2.amazonaws.com/mbed-os-docs-images/mbed_create_cert.png)<span>Photo</span></span>
+<span class="images">![](https://s3.us-west-2.amazonaws.com/reference-docs-images/work_environ_mon_docs/mbed_create_cert.png)<span>Photo</span></span>
 
 Click on the certificate, and then click the button `Download the developer C file`:
 
-<span class="images">![](https://s3-us-west-2.amazonaws.com/mbed-os-docs-images/mbed_cloud_cert_download.png)<span>Photo</span></span>
+<span class="images">![](https://s3.us-west-2.amazonaws.com/reference-docs-images/work_environ_mon_docs/mbed_cloud_cert_download.png)<span>Photo</span></span>
 
 #### Now that you have an Arm Mbed developer C file, follow the these steps to flash your device:
 
 1. Connect your laptop to the device with a USB cable. The laptop automatically adds a new drive, in this case named `DAPLINK`. This is where you drag and drop the firmware:
 
 
-<span class="images">![](https://s3-us-west-2.amazonaws.com/mbed-os-docs-images/image3.jpeg)<span>Photo</span></span>
+<span class="images">![](https://s3.us-west-2.amazonaws.com/reference-docs-images/work_environ_mon_docs/image3.jpeg)<span>Photo</span></span>
 
 1. Visit and clone the firmware-over-the-air (FOTA) demo repository: https://github.com/ARMmbed/fota-demo
 
@@ -55,9 +55,9 @@ That's it! Wait about a minute, and the device is now flashed with your image.
 
 ### Using the command console on the device
 
-<span class="images">![](https://s3-us-west-2.amazonaws.com/mbed-os-docs-images/ScreenShot2017-12-05at2.34.23PM.jpeg)<span>Photo</span></span>
+<span class="images">![](https://s3.us-west-2.amazonaws.com/reference-docs-images/work_environ_mon_docs/ScreenShot2017-12-05at2.34.23PM.jpeg)<span>Photo</span></span>
 
-<span class="images">![](https://s3-us-west-2.amazonaws.com/mbed-os-docs-images/IMG_2039.jpg)<span>Photo</span></span>
+<span class="images">![](https://s3.us-west-2.amazonaws.com/reference-docs-images/work_environ_mon_docs/IMG_2039.jpg)<span>Photo</span></span>
 
 Connect your device to your laptop with a USB cable. Then you can use software such as PuTTy, Coolterm or Minicom to connect to the device.
 
