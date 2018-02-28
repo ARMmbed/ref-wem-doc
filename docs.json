@@ -5,7 +5,7 @@
         "sources": [
             {
                 "type": "markdown",
-                "url": "https://github.com/ARMmbed/work_eviro_mon_docs/blob/master/wem_demo.md"
+                "url": "https://github.com/ARMmbed/ref-wem-docs/blob/master/wem_demo.md"
             }
         ],
         "title": "monitor",
@@ -17,7 +17,7 @@
         "sources": [
             {
                 "type": "markdown",
-                "url": "https://github.com/ARMmbed/fota-hardware/blob/master/README.md"
+                "url": "https://github.com/ARMmbed/ref-wem-hardware/blob/master/README.md"
             }
         ],
         "title": "hardware",
@@ -29,22 +29,22 @@
         "sources": [
             {
                 "type": "markdown",
-                "url": "https://github.com/ARMmbed/fota-demo/blob/dev/docs/software.md"
+                "url": "https://github.com/ARMmbed/ref-wem-firmware/blob/master/docs/software.md"
             }
         ],
         "title": "software",
         "type": "markdown"
     },
     {
-        "description": "fotaportal",
-        "slug": "fotaportal",
+        "description": "webapp",
+        "slug": "webapp",
         "sources": [
             {
                 "type": "markdown",
-                "url": "https://github.com/ARMmbed/fotaportal/blob/staging/README.md"
+                "url": "https://github.com/ARMmbed/ref-wem-webapp/blob/master/README.md"
             }
         ],
-        "title": "fotaportal",
+        "title": "webapp",
         "type": "markdown"
     }
 ]
